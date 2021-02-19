@@ -30,7 +30,7 @@ public abstract class GCParser
 {
 	// Frequently-used regular expressions.
 	public static final String full_gc_re 	=
-		"\\[Full GC (\\(System\\) )?";
+		"\\[Full GC (\\(.+\\) )?";
 	public static final int full_gc_re_groups = 1;
 
 	public static final String heap_size_re =
@@ -141,7 +141,7 @@ public abstract class GCParser
 
 	// Generations which print optional messages.
 	public static final String promo_failed_re =
-		"(--| \\(promotion failed\\))?";
+		"( \\(.+\\))?";
 	public static final int promo_failed_re_groups = 1;
 	public static final String pargc_young_gc_re =
 		"\\[GC" + promo_failed_re + " ";
@@ -191,7 +191,7 @@ public abstract class GCParser
 	public static final String pargc_old_gen_name_re = "(PS|Par)OldGen";
 	public static final int pargc_old_gen_name_re_groups = 1;
 
-	public static final String pargc_perm_gen_name_re = "PSPermGen";
+	public static final String pargc_perm_gen_name_re = "Metaspace";
 	public static final int pargc_perm_gen_name_re_groups = 0;
 
 	/* ------------------------------------------------------------------ */

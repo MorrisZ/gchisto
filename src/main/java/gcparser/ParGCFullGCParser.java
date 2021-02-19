@@ -77,7 +77,7 @@ public class ParGCFullGCParser extends GCParser
 		heap_size_status_re + "\\] " +
 		"\\[" + pargc_old_gen_name_re + ": +" +
 		heap_size_status_re + "\\] " +
-		heap_size_status_re + " " +
+		heap_size_status_re + ", " +
 		"\\[" + pargc_perm_gen_name_re + ": +" +
 		heap_size_status_re + "\\], " + 
 		gc_time_secs_re + "\\]");
